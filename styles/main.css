@@ -1,1 +1,1 @@
-@import url(https://fonts.googleapis.com/css?family=Lobster|Josefin+Sans);body{background:#fafafa;font-family:'Josefin Sans',sans-serif;color:#333}
+@import url(https://fonts.googleapis.com/css?family=Lobster|Josefin+Sans);body{background:#000;font-family:'Josefin Sans',sans-serif;color:#333}.site-bg{position:fixed;display:block;background-image:url(../images/site_bg.jpg);background-size:100%;-webkit-filter:blur(20px);filter:blur(20px);height:100%;width:100%}

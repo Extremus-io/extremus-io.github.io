@@ -20437,7 +20437,13 @@ module.exports = Array.isArray || function (arr) {
 
     /* paper-menu */
     --paper-menu-background-color: #ffffff;
-    --menu-link-color: #111111;
+    --menu-link-color: #696969;
+    --paper-menu-selected-item: {
+      color: var(--primary-color);
+    };
+    --paper-menu-focused-item-after: {
+      background: var(--light-primary-color);
+    }
     --paper-font-common-base: {
       font-family: 'Questrial', sans-serif;
       -webkit-font-smoothing: antialiased;
@@ -20476,7 +20482,7 @@ module.exports = Array.isArray || function (arr) {
 
   paper-menu iron-icon {
     margin-right: 33px;
-    opacity: 0.54;
+    /*opacity: 0.54;*/
   }
 
   paper-menu a {
@@ -20486,10 +20492,9 @@ module.exports = Array.isArray || function (arr) {
 
     text-decoration: none;
     color: var(--menu-link-color);
-
     text-rendering: optimizeLegibility;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: bold;
     line-height: 24px;
     min-height: 48px;
     padding: 0 16px;
@@ -20595,17 +20600,20 @@ module.exports = Array.isArray || function (arr) {
     @apply(--layout-vertical);
     flex-wrap: wrap;
   }
-  .cardholder{
-    justify-content:space-around;
-    flex-direction:row !important;
+
+  .cardholder {
+    justify-content: space-around;
+    flex-direction: row !important;
   }
+
   .card {
     max-width: 400px;
-    margin:30px;
+    margin: 30px;
   }
-  .paper-card{
-    max-width:400px;
-    margin:30px;
+
+  .paper-card {
+    max-width: 400px;
+    margin: 30px;
     padding: 15px 15px 0;
   }
 
@@ -20641,24 +20649,29 @@ module.exports = Array.isArray || function (arr) {
     color: #eeff41;
     margin: 10px;
   }
-  a{
+
+  a {
     color: #00b0af;
   }
-  .form-complex-row{
+
+  .form-complex-row {
     @apply(--layout-horizontal);
     @apply(--layout-center);
-    padding-left:20px;
-    max-width:300px;
+    padding-left: 20px;
+    max-width: 300px;
   }
-  .form-complex-row paper-icon-button{
-    opacity:0.65;
+
+  .form-complex-row paper-icon-button {
+    opacity: 0.65;
   }
-  .complex-input-label{
+
+  .complex-input-label {
     @apply(--paper-font-title);
-    color:var(--secondary-text-color);
+    color: var(--secondary-text-color);
   }
-  paper-button{
-    color:var(--primary-color);
+
+  paper-button {
+    color: var(--primary-color);
   }
 
   /* Breakpoints */
@@ -20672,7 +20685,7 @@ module.exports = Array.isArray || function (arr) {
 
     .card {
       margin: 20px 0 15px;
-      width:calc(97.33% - 32px);
+      width: calc(97.33% - 32px);
     }
 
     paper-material {
@@ -20797,47 +20810,6 @@ module.exports = Array.isArray || function (arr) {
           font-size: 24px !important;
         }
       }
-
-      :root {
-        --primary-text-color: #212121;
-        --primary-background-color: #ffffff;
-        --secondary-text-color: #737373;
-        --disabled-text-color: #9b9b9b;
-        --divider-color: #dbdbdb;
-        --primary-color: #0E7574;
-        --light-primary-color: #a3dfde;
-        --dark-primary-color: #0b5e5d;
-        --accent-color: #ff4b43;
-        --light-accent-color: #f39285;
-        --dark-accent-color: #cc0007;
-
-        /* Components */
-
-        /* paper-drawer-panel */
-        --drawer-menu-color: #ffffff;
-        --drawer-border-color: 1px solid #ccc;
-        --drawer-toolbar-border-color: 1px solid rgba(0, 0, 0, 0.22);
-
-        /* paper-menu */
-        --paper-menu-background-color: #fff;
-        --menu-link-color: #111111;
-        --paper-font-common-base: {
-          font-family: 'Questrial', sans-serif;
-          -webkit-font-smoothing: antialiased;
-
-      }
-
-      paper-menu {
-        --paper-menu-selected-item: {
-          color: var(--primary-color);
-        };
-        --paper-menu-focused-item-after: {
-          background: var(--light-primary-color);
-        }
-      }
-
-
-      }
     </style>
   </template>
 </dom-module>
@@ -20934,20 +20906,20 @@ module.exports = Array.isArray || function (arr) {
       height: 100%;
       position: relative;
       display: block;
-      -webkit-transition: all ease-out 300ms;
-      -moz-transition: all ease-out 300ms;
-      -ms-transition: all ease-out 300ms;
-      -o-transition: all ease-out 300ms;
-      transition: all ease-out 300ms;
-    }
-
-    :host ::content[drawer-menu] {
-      position: fixed;
       -webkit-transition: all ease-out 200ms;
       -moz-transition: all ease-out 200ms;
       -ms-transition: all ease-out 200ms;
       -o-transition: all ease-out 200ms;
       transition: all ease-out 200ms;
+    }
+
+    :host ::content[drawer-menu] {
+      position: fixed;
+      -webkit-transition: all ease-out 400ms;
+      -moz-transition: all ease-out 400ms;
+      -ms-transition: all ease-out 400ms;
+      -o-transition: all ease-out 400ms;
+      transition: all ease-out 400ms;
     }
 
     paper-menu {
